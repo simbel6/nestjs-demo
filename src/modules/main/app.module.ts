@@ -3,7 +3,6 @@ import { TypeOrmModule, TypeOrmModuleAsyncOptions } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from './../config';
-import { MessageModule } from '../message/message.module';
 import { AuthModule } from './../auth';
 import { CorsMiddleware } from '../../middleware/cors.middleware';
 
@@ -27,7 +26,6 @@ import { CorsMiddleware } from '../../middleware/cors.middleware';
     }),
     ConfigModule,
     AuthModule,
-    MessageModule,
   ],
   controllers: [AppController],
   providers: [AppService],
